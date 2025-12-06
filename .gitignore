@@ -1,9 +1,11 @@
-.DS_Store
+# Dependencies
 node_modules
+
+# Build output
 /dist
 
-
-# local env files
+# Environment files
+.env
 .env.local
 .env.*.local
 
@@ -14,6 +16,7 @@ yarn-error.log*
 pnpm-debug.log*
 
 # Editor directories and files
+.DS_Store
 .idea
 .vscode
 *.suo
@@ -21,3 +24,7 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Submission artifacts
+*.zip
+/submission
