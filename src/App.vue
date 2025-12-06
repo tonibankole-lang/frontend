@@ -69,7 +69,7 @@
     <div v-else>
       <!-- Search -->
       <div class="search-bar">
-        <input v-model="searchQuery" @input="searchLessons" placeholder="Search lessons...">
+        <input v-model="searchQuery" @input="debouncedSearch" placeholder="Search lessons...">
       </div>
 
       <!-- Sort Controls -->
@@ -154,7 +154,8 @@ export default {
       checkout: {
         name: '',
         phone: ''
-      }
+      },
+      searchTimer: null
     };
   },
   computed: {
@@ -207,6 +208,16 @@ export default {
       } finally {
         this.loading = false;
       }
+    },
+    debouncedSearch() {
+      // Clear previous timer
+      if (this.searchTimer) {
+        clearTimeout(this.searchTimer);
+      }
+      // Wait 300ms before searching
+      this.searchTimer = setTimeout(() => {
+        this.searchLessons();
+      }, 300);
     },
     searchLessons() {
       if (!this.searchQuery.trim()) {
