@@ -134,7 +134,17 @@
 </template>
 
 <script>
-// API Base URL - change this for production
+/**
+ * LearnHub Main Application Component
+ * 
+ * Features:
+ * - Browse and search lessons
+ * - Sort by subject, location, price, spaces
+ * - Add/remove items from cart
+ * - Checkout with validation
+ */
+
+// API Base URL - uses VITE_API_URL env var or defaults to localhost
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
 export default {
