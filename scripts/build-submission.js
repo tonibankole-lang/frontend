@@ -1,8 +1,13 @@
 /**
  * build-submission.js - Cross-platform submission builder
+ * 
  * Works on Windows, Mac, and Linux
+ * Automatically detects GitHub repo info from git remotes
  * 
  * Run: npm run submit
+ * 
+ * @author Tony
+ * @version 1.0.0
  */
 
 import { execSync } from 'child_process';
