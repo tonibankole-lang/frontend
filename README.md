@@ -82,6 +82,14 @@ frontend/
 |----------|-------------|---------|
 | `VITE_API_URL` | Backend API base URL | `http://localhost:3000` |
 
+## 📱 Screenshots
+
+The app features:
+- Clean, modern UI with gradient background
+- Responsive card grid for lessons
+- Interactive cart with checkout form
+- Success modal after order placement
+
 ## 📄 License
 
 MIT
