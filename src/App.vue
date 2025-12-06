@@ -129,6 +129,8 @@ export default {
       cart: [],
       showCart: false,
       orderSuccess: false,
+      loading: false,
+      error: null,
       searchQuery: '',
       sortBy: 'subject',
       sortOrder: 'asc',
@@ -176,13 +178,19 @@ export default {
     this.fetchLessons();
   },
   methods: {
-    fetchLessons() {
-      fetch(`${API_URL}/lessons`)
-        .then(res => res.json())
-        .then(data => {
-          this.lessons = data;
-        })
-        .catch(err => console.error('Error fetching lessons:', err));
+    async fetchLessons() {
+      this.loading = true;
+      this.error = null;
+      try {
+        const res = await fetch(`${API_URL}/lessons`);
+        if (!res.ok) throw new Error('Failed to fetch lessons');
+        this.lessons = await res.json();
+      } catch (err) {
+        this.error = 'Failed to load lessons. Please try again.';
+        console.error('Error fetching lessons:', err);
+      } finally {
+        this.loading = false;
+      }
     },
     searchLessons() {
       if (!this.searchQuery.trim()) {
