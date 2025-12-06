@@ -1,6 +1,8 @@
 {
-  "name": "frontend",
+  "name": "learnhub-frontend",
   "version": "1.0.0",
+  "description": "Vue 3 + Vite frontend for LearnHub lesson booking system",
+  "author": "Tony",
   "private": true,
   "type": "module",
   "scripts": {
