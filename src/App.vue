@@ -125,6 +125,11 @@
         <button @click="orderSuccess = false">Close</button>
       </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2024 LearnHub. All rights reserved.</p>
+    </footer>
   </div>
 </template>
 
@@ -684,5 +689,13 @@ body {
   padding: 8px 16px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
 }
 </style>
