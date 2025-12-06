@@ -102,7 +102,18 @@
         </div>
       </div>
 
-      <p v-if="sortedLessons.length === 0" class="no-results">No lessons found</p>
+      <!-- Loading spinner -->
+      <div v-if="loading" class="loading">
+        <i class="fas fa-spinner fa-spin"></i> Loading lessons...
+      </div>
+
+      <!-- Error message -->
+      <div v-if="error" class="error-message">
+        <i class="fas fa-exclamation-circle"></i> {{ error }}
+        <button @click="fetchLessons">Retry</button>
+      </div>
+
+      <p v-if="!loading && sortedLessons.length === 0" class="no-results">No lessons found</p>
     </div>
 
     <!-- Order Success Modal -->
@@ -643,5 +654,35 @@ body {
   padding: 40px;
   color: white;
   font-size: 1.2rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 60px;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.loading i {
+  margin-right: 10px;
+}
+
+.error-message {
+  text-align: center;
+  padding: 30px;
+  background: #f8d7da;
+  color: #721c24;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.error-message button {
+  margin-left: 15px;
+  background: #721c24;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 </style>
