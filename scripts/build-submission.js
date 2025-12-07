@@ -134,9 +134,9 @@ const readme = `# LearnHub - CST3144 Coursework Submission
 
 | Resource | URL |
 |----------|-----|
-| **Frontend Repository** | https://github.com/${FRONTEND_REPO} |
-| **Frontend Live (GitHub Pages)** | https://${GITHUB_USERNAME}.github.io/${FRONTEND_REPO_NAME}/ |
-| **Backend Repository** | https://github.com/${BACKEND_REPO} |
+| **Frontend Repository** | https://github.com/tonibankole-lang/frontend |
+| **Frontend Live (GitHub Pages)** | https://tonibankole-lang.github.io/frontend/ |
+| **Backend Repository** | https://github.com/tonibankole-lang/backend- |
 | **Backend Live (Render)** | ${RENDER_URL}/lessons |
 
 ## 📁 Contents
