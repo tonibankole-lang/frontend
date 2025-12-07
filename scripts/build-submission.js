@@ -20,7 +20,7 @@ const __dirname = path.dirname(__filename);
 
 // ============== STUDENT: UPDATE THESE VALUES ==============
 const STUDENT_NAME = 'Tony';
-const RENDER_URL = 'https://learnhub-backend.onrender.com';
+const RENDER_URL = 'https://backend-7lgl.onrender.com';
 // ==========================================================
 
 const ROOT = path.resolve(__dirname, '../..');

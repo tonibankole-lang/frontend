@@ -4,9 +4,9 @@ Vue 3 + Vite frontend for the LearnHub lesson booking system.
 
 ## 🔗 Links
 
-- **Live App**: `https://YOUR_USERNAME.github.io/vue-frontend/`
-- **Backend API**: `https://YOUR_RENDER_URL.onrender.com`
-- **Backend Repo**: [express-backend](https://github.com/YOUR_USERNAME/express-backend)
+- **Live App**: `https://tonibankole-lang.github.io/frontend/`
+- **Backend API**: `https://backend-7lgl.onrender.com`
+- **Backend Repo**: [backend-](https://github.com/tonibankole-lang/backend-)
 
 ## 🛠 Tech Stack
 
